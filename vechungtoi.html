@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Bmigo - Ứng dụng đếm calo bằng AI và lên kế hoạch ăn kiêng giảm cân hiệu quả</title>
+	<script src="scripts/taitrang.js" type="text/javascript"></script>
+	<link href="styles/default.css" type="text/css" rel="stylesheet">
+	<link href="styles/vechungtoi.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div class="grid-bg" aria-hidden="true"></div>
+
+<header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="hinhanh/logo.png" width="60" height="60" alt=""/><a>BMIgo</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+            <a href="index.html" class="active">Trang chủ</a>
+			<a href="vechungtoi.html">Về chúng tôi</a>
+            <a href="BMI.html">Tính BMI</a>
+            <a href="thucdon.html">Thực đơn</a>
+            <a href="tapluyen.html">Tập luyện</a>
+			<a href="tuvan.html">Tư vấn</a>
+			<a href="lienhe.html">Liên hệ</a>
+	  </nav>
+            <div class="nav-actions">
+                <div class="user-nav">
+                    <a href="dangky.html" class="user-nav__trigger" aria-expanded="false">
+                        <span class="user-nav__icon">👤</span>
+                        <span class="user-nav__label">Tài khoản</span>
+                    </a>
+                    <div class="user-nav__menu" hidden>
+                        <button type="button" class="user-nav__btn--info">Thông tin</button>
+                        <button type="button" class="user-nav__btn--logout">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<main>
+  <div class="hero-section" style="border-top:none;">
+    <div class="hero-banner" aria-hidden="true">
+      <div class="banner-slide slide-1 active"><img src="hinhanh/b1.jpg" width="1200" height="800" alt=""/></div>
+      <div class="banner-slide slide-2"><img src="hinhanh/b2.jpg" width="1200" height="800" alt=""/></div>
+      <div class="banner-slide slide-3"><img src="hinhanh/b3.jpg" width="1200" height="800" alt=""/></div>
+      <div class="banner-slide slide-4"><img src="hinhanh/b4.jpg" width="1200" height="800" alt=""/></div>
+      <div class="banner-overlay"></div>
+    </div>
+    <button type="button" class="banner-arrow arrow-left" aria-label="Ảnh trước">‹</button>
+    <button type="button" class="banner-arrow arrow-right" aria-label="Ảnh sau">›</button>
+
+    <section class="hero wrap">
+    <span class="eyebrow">Công cụ tính chỉ số khối cơ thể</span>
+    <h1>Hiểu cơ thể bạn <em>bằng một con số</em>, không cần đoán mò.</h1>
+    <p class="hero-sub">Cân Đối là công cụ tính BMI trực tuyến, giúp bạn theo dõi chỉ số khối cơ thể nhanh, chính xác và dễ hiểu — không quảng cáo, không thu thập dữ liệu thừa.</p>
+    <div class="hero-actions">
+      <a href="BMI.html" class="btn-primary">Tính BMI của bạn</a>
+      <a href="#gioi-thieu" class="btn-ghost">Xem cách hoạt động</a>
+    </div>
+
+    <div class="bmi-scale">
+      <div class="bmi-scale-head">
+        <span class="bmi-scale-title">Thang phân loại BMI</span>
+        <span class="bmi-scale-value">Ví dụ: 22.5 — Bình thường</span>
+      </div>
+      <div class="bar-track">
+        <div class="seg seg-under"></div>
+        <div class="seg seg-normal"></div>
+        <div class="seg seg-over"></div>
+        <div class="seg seg-obese"></div>
+        <div class="marker" aria-hidden="true"></div>
+      </div>
+      <div class="bar-labels">
+        <span>Thiếu cân</span>
+        <span>Bình thường</span>
+        <span>Thừa cân</span>
+        <span>Béo phì</span>
+      </div>
+    </div>
+    </section>
+  </div>
+
+  <section id="gioi-thieu" class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">Thông tin cơ bản</span>
+        <h2>Một công cụ, ba việc chính</h2>
+      </div>
+      <p class="section-desc">Cân Đối được xây dựng để đơn giản hóa việc theo dõi sức khỏe hằng ngày, không đòi hỏi kiến thức y khoa.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature">
+        <div class="feature-index">01</div>
+        <h3>Tính BMI tức thì</h3>
+        <p>Nhập chiều cao và cân nặng, nhận kết quả BMI cùng phân loại (thiếu cân, bình thường, thừa cân, béo phì) ngay lập tức.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-index">02</div>
+        <h3>Theo dõi theo thời gian</h3>
+        <p>Lưu lại lịch sử đo để xem xu hướng cân nặng và chỉ số cơ thể thay đổi ra sao qua thời gian</p>
+      </div>
+      <div class="feature">
+        <div class="feature-index">03</div>
+        <h3>Gợi ý phù hợp</h3>
+        <p>Đưa ra khoảng cân nặng khỏe mạnh tham khảo, điều chỉnh theo nhu cầu của người dùng.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sang-lap" class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">Người sáng lập</span>
+        <h2>Người đứng sau BMIgo</h2>
+      </div>
+    </div>
+
+    <div class="founder-card">
+      <div class="avatar" aria-hidden="true">NN</div>
+      <div>
+        <div class="founder-name">Nhật Nguyễn</div>
+        <div class="founder-role">Người sáng lập &amp; Kỹ sư phần mềm</div>
+        <p class="founder-bio">Nhật Nguyễn từng làm việc trong lĩnh vực công nghệ y tế trước khi bắt tay xây dựng Cân Đối. Xuất phát từ nhu cầu cá nhân — muốn có một công cụ tính BMI nhanh, riêng tư và không rối rắm — anh đã tự thiết kế và phát triển toàn bộ sản phẩm.</p>
+        <p class="founder-quote">"Tôi muốn mọi người kiểm tra chỉ số cơ thể của mình trong 10 giây, không cần đăng ký, không cần quảng cáo chen ngang."</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="hanh-trinh" class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="section-tag">Thời điểm sáng lập</span>
+        <h2>Hành trình của BMIgo</h2>
+      </div>
+    </div>
+
+    <div class="timeline-layout">
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-date">Tháng 3, 2023</div>
+          <div class="t-title">Ý tưởng ban đầu</div>
+          <div class="t-desc">Minh Trần bắt đầu phác thảo Cân Đối như một dự án cá nhân sau khi không tìm được công cụ tính BMI nào đủ đơn giản và không quảng cáo.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-date">Tháng 7, 2023</div>
+          <div class="t-title">Ra mắt phiên bản đầu tiên</div>
+          <div class="t-desc">Cân Đối chính thức hoạt động với tính năng tính BMI cơ bản, phục vụ nhóm người dùng thử nghiệm đầu tiên.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-date">2024 — nay</div>
+          <div class="t-title">Mở rộng tính năng</div>
+          <div class="t-desc">Bổ sung theo dõi lịch sử đo và gợi ý theo độ tuổi, dựa trên phản hồi trực tiếp từ người dùng.</div>
+        </div>
+      </div>
+
+      <div class="timeline-videos">
+        <div class="video-card">
+            <div class="video-card__label"></div>
+            <video controls preload="metadata" poster="hinhanh/video-placeholder.png" muted playsinline>
+              <source src="hinhanh/v1.mp4" type="video/mp4">
+            </video>
+          </div>
+      </div>
+    </div>
+  </section>
+</main>
+<br>
+<footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col brand-col">
+        <a class="logo footer-logo">
+          <img src="hinhanh/logo.png" alt="BMIgo Logo" class="logo-img" width="100px" height="100px">
+		 <p class="footer-about">BMIgo: hiểu rõ cơ thể mình, đơn giản hóa hành trình kiểm soát cân nặng, xây dựng lối sống lành mạnh!</p>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Danh mục</h4>
+        <ul>
+          <li><a href="BMI.html">Tính BMI</a></li>
+          <li><a href="thucdon.html">Thực đơn hàng tuần</a></li>
+          <li><a href="tapluyen.html">Các bài tập đơn giản</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hỗ trợ</h4>
+        <ul>
+          <li><a href="lienhe.html">Trung tâm hỗ trợ</a></li>
+          <li><a href="tuvan.html">Hướng dẫn tập luyện</a></li>
+          <li><a href="tuvan.html">Tư vấn món ăn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©  2026 BMIgo. Tất cả các quyền được bảo lưu</p>
+      <p>Page được tạo nên với sức khỏe của người Việt là tiêu chí hàng đầu</p>
+	  <p>Lưu ý: Chỉ số BMI chỉ mang tính chất tham khảo và không thay thế cho các chẩn đoán y khoa chuyên sâu.</p>
+    </div>
+	<button class="scrollToTopBtn" id="scrollToTopBtn" title="Lên đầu trang">^</button>
+  </footer>
+<script src="scripts/user-nav.js"></script>
+</body>
+<body>
+<div class="chat-badge" id="chatBadge" onclick="toggleChat()">💬</div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Trợ Lý Sức Khỏe & BMI 🌿</span>
+            <span class="close-btn" onclick="toggleChat()">×</span>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="msg bot">
+                Xin chào! Tôi có thể giúp gì cho hành trình kiểm soát cân nặng và sức khỏe của bạn hôm nay?
+                <div class="chat-options">
+                    <button class="opt-btn" onclick="selectOption('Tính chỉ số BMI')">📊 Tính BMI</button>
+					<button class="opt-btn" onclick="selectOption('Mẹo tập luyện')">🏋️ Mẹo tập luyện</button>
+                    <button class="opt-btn" onclick="selectOption('Mẹo kiểm soát cân nặng')">🥗 Mẹo kiểm soát cân nặng</button>
+                    <button class="opt-btn" onclick="selectOption('Tại sao áp dụng mẹo không hiệu quả?')">❓ Mẹo không hiệu quả?</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">➔</button>
+        </div>
+	</div>
+<script>
+// Lấy thẻ button theo ID
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Lắng nghe sự kiện cuộn chuột của người dùng
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  // Nếu cuộn xuống hơn 20px từ đỉnh trang
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block"; // Hiện nút
+  } else {
+    scrollToTopBtn.style.display = "none";  // Ẩn nút
+  }
+}
+
+// Định nghĩa hành động khi bấm vào nút
+scrollToTopBtn.addEventListener("click", function() {
+  // Cuộn về vị trí x=0, y=0
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Đảm bảo hiệu ứng trượt mượt mà
+  });
+});	
+</script>
+<script>
+  (function(){
+    var slides = document.querySelectorAll('.banner-slide');
+    var btnPrev = document.querySelector('.banner-arrow.arrow-left');
+    var btnNext = document.querySelector('.banner-arrow.arrow-right');
+    var current = 0;
+    var AUTOPLAY_MS = 10000;
+    var timer = null;
+
+    function showSlide(index){
+      if (!slides.length) return;
+      slides[current].classList.remove('active');
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add('active');
+    }
+
+    function go(direction){
+      if (!slides.length) return;
+      showSlide(current + direction);
+      resetAutoplay();
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener('click', function(){ go(-1); });
+    }
+    if (btnNext) {
+      btnNext.addEventListener('click', function(){ go(1); });
+    }
+
+    function startAutoplay(){
+      timer = setInterval(function(){ showSlide(current + 1); }, AUTOPLAY_MS);
+    }
+
+    function resetAutoplay(){
+      clearInterval(timer);
+      startAutoplay();
+    }
+
+    startAutoplay();
+  })();
+</script>
+<script>
+  (function(){
+    var videos = document.querySelectorAll('.timeline-videos video');
+    if (!videos || videos.length === 0) return;
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var v = entry.target;
+        if (entry.intersectionRatio >= 0.5){
+          v.muted = true;
+          v.playsInline = true;
+          var p = v.play();
+          if (p && p.catch) p.catch(function(){});
+          // pause other videos
+          videos.forEach(function(other){ if (other !== v && !other.paused){ other.pause(); other.currentTime = 0; } });
+        } else {
+          if (!v.paused){ v.pause(); v.currentTime = 0; }
+        }
+      });
+    }, { threshold: [0.5] });
+
+    videos.forEach(function(v){ observer.observe(v); });
+  })();
+</script>
+</body>
+</html>

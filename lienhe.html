@@ -1,0 +1,535 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green BMI Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+	<title>Bmigo - Ứng dụng đếm calo bằng AI và lên kế hoạch ăn kiêng giảm cân hiệu quả</title>
+	<script type="text/javascript" src="scripts/taitrang.js"></script>
+	<link href="styles/default.css" type="text/css" rel="stylesheet">
+	<link href="styles/lienhe.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<header class="navbar">
+        <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="hinhanh/logo.png" width="60" height="60" alt=""/><a>BMIgo</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+            <a href="index.html" class="active">Trang chủ</a>
+			<a href="vechungtoi.html">Về chúng tôi</a>
+            <a href="BMI.html">Tính BMI</a>
+            <a href="thucdon.html">Thực đơn</a>
+            <a href="tapluyen.html">Tập luyện</a>
+			<a href="tuvan.html">Tư vấn</a>
+			<a href="lienhe.html">Liên hệ</a>
+	  </nav>
+            <div class="nav-actions">
+                <div class="user-nav">
+                    <a href="dangky.html" class="user-nav__trigger" aria-expanded="false">
+                        <span class="user-nav__icon">👤</span>
+                        <span class="user-nav__label">Tài khoản</span>
+                    </a>
+                    <div class="user-nav__menu" hidden>
+                        <button type="button" class="user-nav__btn--info">Thông tin</button>
+                        <button type="button" class="user-nav__btn--logout">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    </header>
+<br>
+<div class="big-wrap">
+<div class="page-wrap">
+
+  <div class="page-header">
+    <div class="eyebrow">Liên Hệ & Khảo Sát</div>
+    <h1 class="page-title">Chúng tôi luôn <span>sẵn sàng</span><br>lắng nghe bạn</h1>
+    <p class="page-sub">Điền thông tin hoặc gửi câu hỏi trực tiếp cho đội ngũ cố vấn chuyên môn.</p>
+  </div>
+
+  <div class="main-layout">
+    
+    <div class="card1">
+      <div class="card1-grid">
+        <div class="card1-col card1-col-left">
+          <form id="contactForm" autocomplete="off">
+            <div class="form-row">
+              <div class="field-group">
+                <label for="fullname">Họ và Tên</label>
+                <input class="placeholder" type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required />
+              </div>
+              <div class="field-group">
+                <label for="phone">Số Điện thoại</label>
+                <input class="placeholder" type="tel" id="phone" name="phone" placeholder="0912 345 678" required />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input class="placeholder" type="email" id="email" name="email" placeholder="example@gmail.com" required />
+            </div>
+
+            <hr class="divider"/>
+
+            <div class="section-label">Bạn muốn hỏi về điều gì?</div>
+
+            <div class="field-group" style="margin-bottom:0;">
+              <label>Chọn chủ đề câu hỏi</label>
+              <div class="select-wrapper" id="selectWrapper">
+                <div class="custom-select" id="customSelect" tabindex="0" role="combobox" aria-expanded="false">
+                  <span id="selectDisplay" class="placeholder">-- Bấm vào đây để chọn chủ đề --</span>
+                </div>
+                <div class="arrow-icon" id="arrowIcon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </div>
+
+                <div class="dropdown-list" id="dropdownList" role="listbox">
+                  <div class="dropdown-item" data-value="gia" role="option"><span class="item-dot"></span>Hỏi về các bài tập luyện</div>
+                  <div class="dropdown-item" data-value="sanpham" role="option"><span class="item-dot"></span>Hỏi về thực đơn</div>
+                  <div class="dropdown-item" data-value="hotro" role="option"><span class="item-dot"></span>Cần hỗ trợ kỹ thuật</div>
+                  <div class="dropdown-item" data-value="hopTac" role="option"><span class="item-dot"></span>Đề xuất hợp tác / đối tác</div>
+                  <div class="dropdown-item other-option" data-value="other" role="option"><span class="item-dot"></span>Khác (tự nhập câu hỏi)</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="custom-question-wrap" id="customQuestionWrap">
+              <label for="customQuestion" style="display:block; font-size:11.5px; font-weight:500; letter-spacing:1.8px; text-transform:uppercase; color:var(--muted); margin-bottom:7px;">Câu hỏi của bạn</label>
+              <textarea id="customQuestion" name="customQuestion" rows="4" placeholder="Nhập câu hỏi cụ thể tại đây..."></textarea>
+            </div>
+
+            <button type="button" class="btn-submit" id="unifiedSubmitBtn">Gửi thông tin / câu hỏi</button>
+            <div class="success-toast" id="successToast">Đã gửi thành công! Chúng tôi sẽ liên hệ bạn sớm nhất có thể.</div>
+          </form>
+        </div>
+
+        <div class="card1-col card1-col-right">
+          <div class="section-label">Đặt câu hỏi nhanh</div>
+          
+          <form id="quickQuestionForm" autocomplete="off" style="display: flex; flex-direction: column; flex-grow: 1;">
+            <div class="field-group">
+              <label for="quickQuestionText">Nội dung thắc mắc của bạn</label>
+              <textarea class="placeholder" id="quickQuestionText" name="quickQuestionText" rows="4" placeholder="Viết câu hỏi của bạn tại đây để nhận phản hồi công khai..."></textarea>
+            </div>
+          </form>
+
+          <hr class="divider" style="margin: 10px 0 20px 0;"/>
+
+          <div class="section-label">Câu hỏi gần đây (Cuộn để xem)</div>
+          
+          <div class="qa-scroll-container" id="qaContainer">
+            <div class="qa-item">
+              <div class="qa-question">❓ Làm thế nào để duy trì thực đơn Eat Clean khi bận rộn?</div>
+              <div class="qa-answer">💡 Bạn có thể chuẩn bị sẵn thức ăn (Meal prep) vào cuối tuần, chia hộp trữ đông và dùng dần cho các ngày trong tuần để tiết kiệm thời gian.</div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-question">❓ Chế độ tính chỉ số BMI có mất phí không?</div>
+              <div class="qa-answer">💡 Hoàn toàn miễn phí. Hệ thống của chúng tôi hỗ trợ tính toán tự động dựa trên các tiêu chuẩn y khoa quốc tế.</div>
+            </div>
+            <div class="qa-item">
+              <div class="qa-question">❓ Tôi cần tập luyện bao nhiêu buổi một tuần để giảm mỡ?</div>
+              <div class="qa-answer">💡 Bạn nên duy trì tối thiểu từ 3 - 4 buổi/tuần, kết hợp đan xen giữa các bài tập Cardio và Kháng lực.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="contact-meta">
+    <div class="meta-item">
+      <div class="meta-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.3a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .5h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.29a16 16 0 006.29 6.29l1.17-1.17a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+      </div>
+      <div class="meta-title">Điện thoại</div>
+      <div class="meta-value">+84 326 825 426</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </div>
+      <div class="meta-title">Email</div>
+      <div class="meta-value">bmigo@gmail.vn</div>
+    </div>
+    <div class="meta-item">
+      <div class="meta-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div class="meta-title">THỜI GIAN PHẢN HỒI</div>
+      <div class="meta-value">Trả lời ngay sau 2 tiếng. Chậm nhất là 12 tiếng</div>
+    </div>
+  </div>
+
+</div>
+</div>
+<script src="scripts/user-nav.js"></script>
+<script>
+  // Script xử lý form liên hệ cũ
+  const selectEl    = document.getElementById('customSelect');
+  const displayEl   = document.getElementById('selectDisplay');
+  const dropdown    = document.getElementById('dropdownList');
+  const wrapper     = document.getElementById('selectWrapper');
+  const customWrap  = document.getElementById('customQuestionWrap');
+  const customTA    = document.getElementById('customQuestion');
+  const form        = document.getElementById('contactForm');
+  const unifiedBtn  = document.getElementById('unifiedSubmitBtn');
+  const toast       = document.getElementById('successToast');
+  const quickInput  = document.getElementById('quickQuestionText');
+
+  let selectedValue = null;
+  let isOpen = false;
+
+  function openDropdown() {
+    isOpen = true;
+    dropdown.classList.add('show');
+    selectEl.classList.add('open');
+    wrapper.classList.add('open-wrapper');
+  }
+
+  function closeDropdown() {
+    isOpen = false;
+    dropdown.classList.remove('show');
+    selectEl.classList.remove('open');
+    wrapper.classList.remove('open-wrapper');
+  }
+
+  selectEl.addEventListener('click', () => { isOpen ? closeDropdown() : openDropdown(); });
+
+  document.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const val = item.getAttribute('data-value');
+      const text = item.textContent.trim();
+      document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      selectedValue = val;
+      displayEl.textContent = text;
+      displayEl.classList.remove('placeholder');
+      closeDropdown();
+
+      if (val === 'other') {
+        customWrap.classList.add('visible');
+        setTimeout(() => customTA.focus(), 350);
+      } else {
+        customWrap.classList.remove('visible');
+        customTA.value = '';
+      }
+    });
+  });
+
+  document.addEventListener('click', (e) => { if (!wrapper.contains(e.target)) closeDropdown(); });
+
+  unifiedBtn.addEventListener('click', () => {
+    const fullname = document.getElementById('fullname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const questionText = quickInput.value.trim();
+    const contactHasData = fullname || phone || email || selectedValue;
+    const quickHasData = questionText.length > 0;
+
+    if (!contactHasData && !quickHasData) {
+      unifiedBtn.classList.add('shake');
+      setTimeout(() => unifiedBtn.classList.remove('shake'), 300);
+      return;
+    }
+
+    if (contactHasData) {
+      if (!fullname || !phone || !email) {
+        unifiedBtn.textContent = 'Thiếu thông tin...';
+        setTimeout(() => unifiedBtn.textContent = 'Gửi thông tin / câu hỏi', 2000);
+        return;
+      }
+
+      if (!selectedValue) {
+        selectEl.style.borderColor = 'var(--error)';
+        setTimeout(() => selectEl.style.borderColor = '', 2000);
+        return;
+      }
+    }
+
+    unifiedBtn.textContent = 'Đang gửi...';
+    unifiedBtn.classList.add('loading');
+
+    setTimeout(() => {
+      toast.classList.add('show');
+
+      if (contactHasData) {
+        form.reset();
+        displayEl.textContent = '-- Bấm vào đây để chọn chủ đề --';
+        displayEl.className = 'placeholder';
+        document.querySelectorAll('.dropdown-item').forEach(i => i.classList.remove('active'));
+        customWrap.classList.remove('visible');
+        selectedValue = null;
+      }
+
+      if (quickHasData) {
+        const newItem = document.createElement('div');
+        newItem.className = 'qa-item';
+        newItem.style.animation = 'fadeUp 0.5s ease both';
+        newItem.innerHTML = `
+          <div class="qa-question">❓ ${questionText}</div>
+          <div class="qa-answer" style="color: var(--gold);">✨ Đội ngũ chuyên gia đang tiếp nhận dữ liệu và sẽ trả lời bạn tại đây.</div>
+        `;
+        qaContainer.insertBefore(newItem, qaContainer.firstChild);
+        quickInput.value = '';
+        qaContainer.scrollTop = 0;
+      }
+
+      setTimeout(() => {
+        unifiedBtn.textContent = 'Gửi thông tin / câu hỏi';
+        unifiedBtn.classList.remove('loading');
+        toast.classList.remove('show');
+      }, 3000);
+    }, 1400);
+  });
+
+  const qaContainer = document.getElementById('qaContainer');
+</script>
+<br>
+<footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col brand-col">
+        <a class="logo footer-logo">
+          <img src="hinhanh/logo.png" alt="BMIgo Logo" class="logo-img" width="100px" height="100px">
+		 <p class="footer-about">BMIgo: hiểu rõ cơ thể mình, đơn giản hóa hành trình kiểm soát cân nặng, xây dựng lối sống lành mạnh!</p>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Danh mục</h4>
+        <ul>
+          <li><a href="BMI.html">Tính BMI</a></li>
+          <li><a href="thucdon.html">Thực đơn hàng tuần</a></li>
+          <li><a href="tapluyen.html">Các bài tập đơn giản</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hỗ trợ</h4>
+        <ul>
+          <li><a href="lienhe.html">Trung tâm hỗ trợ</a></li>
+          <li><a href="tuvan.html">Hướng dẫn tập luyện</a></li>
+          <li><a href="tuvan.html">Tư vấn món ăn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©  2026 BMIgo. Tất cả các quyền được bảo lưu</p>
+      <p>Page được tạo nên với sức khỏe của người Việt là tiêu chí hàng đầu</p>
+	  <p>Lưu ý: Chỉ số BMI chỉ mang tính chất tham khảo và không thay thế cho các chẩn đoán y khoa chuyên sâu.</p>
+    </div>
+	<button class="scrollToTopBtn" id="scrollToTopBtn" title="Lên đầu trang">^</button>
+  </footer>
+<body>
+<div class="chat-badge" id="chatBadge" onclick="toggleChat()">💬</div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Trợ Lý Sức Khỏe & BMI 🌿</span>
+            <span class="close-btn" onclick="toggleChat()">×</span>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="msg bot">
+                Xin chào! Tôi có thể giúp gì cho hành trình kiểm soát cân nặng và sức khỏe của bạn hôm nay?
+                <div class="chat-options">
+                    <button class="opt-btn" onclick="selectOption('Tính chỉ số BMI')">📊 Tính BMI</button>
+					<button class="opt-btn" onclick="selectOption('Mẹo tập luyện')">🏋️ Mẹo tập luyện</button>
+                    <button class="opt-btn" onclick="selectOption('Mẹo kiểm soát cân nặng')">🥗 Mẹo kiểm soát cân nặng</button>
+                    <button class="opt-btn" onclick="selectOption('Tại sao áp dụng mẹo không hiệu quả?')">❓ Mẹo không hiệu quả?</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">➔</button>
+        </div>
+	</div>
+<script>
+        let bmiStep = 0; 
+        let userWeight = 0;
+        let userHeight = 0;
+
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatWindow');
+            chatWindow.style.display = (chatWindow.style.display === 'none' || chatWindow.style.display === '') ? 'flex' : 'none';
+            scrollToBottom();
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') sendMessage();
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            appendMessage(text, 'user');
+            input.value = '';
+
+            setTimeout(() => { processBotResponse(text); }, 600);
+        }
+
+        function selectOption(optionText) {
+            appendMessage(optionText, 'user');
+            setTimeout(() => { processBotResponse(optionText); }, 500);
+        }
+
+        function appendMessage(text, sender) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('msg', sender);
+            msgDiv.innerHTML = text; 
+            messagesContainer.appendChild(msgDiv);
+            scrollToBottom();
+        }
+
+        function scrollToBottom() {
+            const messagesContainer = document.getElementById('chatMessages');
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // HỆ THỐNG XỬ LÝ PHẢN HỒI THÔNG MINH
+        function processBotResponse(userInput) {
+            const lowerInput = userInput.toLowerCase();
+
+            // 1. PHẢN HỒI KHI NGƯỜI DÙNG PHÀN NÀN (Mẹo không hiệu quả / Tập mãi không giảm...)
+            if (
+                lowerInput.includes('không hiệu quả') || 
+                lowerInput.includes('ko hiệu quả') || 
+                lowerInput.includes('không có tác dụng') || 
+                lowerInput.includes('áp dụng mãi không') || 
+                lowerInput.includes('tại sao sử dụng mẹo') || 
+                lowerInput.includes('tập mãi không') || 
+                lowerInput.includes('vẫn béo') || 
+                lowerInput.includes('vẫn gầy')
+            ) {
+                const response = `❤️ Tôi rất tiếc khi nghe điều này và hiểu sự thất vọng của bạn. Cơ địa, trạng thái cơ bắp và tốc độ chuyển hóa của mỗi người hoàn toàn khác nhau. Một bài tập hay chế độ ăn đại trà đôi khi không thể kích hoạt cơ thể bạn hiệu quả.<br><br>
+                Để tránh lãng phí thời gian cũng như hạn chế chấn thương, <b>tôi đề xuất bạn nên thảo luận trực tiếp với Đội ngũ HLV / Nhân viên y tế của chúng tôi</b> để được kiểm tra chuyên sâu và thiết kế lộ trình riêng.<br><br>
+                👇 Bạn hãy bấm nút bên dưới để kết nối ngay nhé: <br>
+                <a href="https://zalo.me/your-link" target="_blank" class="contact-btn">📞 Gặp Nhân Viên Tư Vấn (Miễn Phí)</a>`;
+                
+                appendMessage(response, "bot");
+                showGeneralMenu();
+                return;
+            }
+
+            // 2. MẸO TẬP LUYỆN
+            if (lowerInput.includes('tập luyện') || lowerInput.includes('bài tập') || lowerInput.includes('thể dục') || lowerInput.includes('tập gym')) {
+                const response = `🏋️ <b>Mẹo tập luyện tối ưu hóa vóc dáng:</b><br><br>
+                🔥 <b>Nếu mục tiêu là Giảm mỡ:</b> Hãy kết hợp 70% các bài tập <i>Cardio/HIIT</i> (chạy bộ, nhảy dây, đạp xe) để đốt calo nhanh và 30% bài tập tạ để giữ cơ, tránh nhão da.<br><br>
+                💪 <b>Nếu mục tiêu là Tăng cân/Tăng cơ:</b> Tập trung vào các bài tập <i>Kháng lực</i> (Squat, Push-up, tập tạ nâng dần khối lượng) kết hợp nghỉ ngơi 48 tiếng giữa các nhóm cơ để cơ bắp có thời gian phát triển.<br><br>
+                ⏱️ <b>Thời gian lý tưởng:</b> Duy trì tối thiểu 3-4 buổi/tuần, mỗi buổi từ 45 - 60 phút. Đừng quên khởi động kỹ 5-10 phút trước khi tập!`;
+                
+                appendMessage(response, "bot");
+                showGeneralMenu();
+                return;
+            }
+
+            // 3. XỬ LÝ KỊCH BẢN TÍNH BMI TỪNG BƯỚC (ĐÃ BỎ ĐỂ CHUYỂN TRANG NHƯNG GIỮ NGUYÊN BIẾN TRÁNH LỖI)
+            if (bmiStep === 1) {
+                bmiStep = 0;
+                return;
+            } 
+            
+            if (bmiStep === 2) {
+                bmiStep = 0;
+                return;
+            }
+
+            // 4. XỬ LÝ CÁC TỪ KHÓA KHÁC
+            // Thay đổi hành động khi nhắn chữ "bmi" hoặc "tính" -> Trả ra ô bấm chuyển trang
+            if (lowerInput.includes('bmi') || lowerInput.includes('tính')) {
+                const response = `📊 Để tính toán chỉ số BMI một cách chính xác nhất và xem biểu đồ phân tích, bạn vui lòng sử dụng công cụ chuyên sâu tại trang riêng của chúng tôi nhé.<br><br>
+                👇 Hãy nhấn vào nút bên dưới để chuyển hướng:<br>
+                <a href="duong-dan-trang-tinh-bmi-cua-ban.html" target="_blank" class="contact-btn"">📊 Đi Đến Trang Tính BMI</a>`;
+                
+                appendMessage(response, "bot");
+                showGeneralMenu();
+            } else if (lowerInput.includes('dinh dưỡng') || lowerInput.includes('ăn') || lowerInput.includes('giảm cân') || lowerInput.includes('tăng cân')) {
+                appendMessage("🥗 <b>Mẹo dinh dưỡng cốt lõi:</b><br>1. Giảm cân: Hãy tạo thâm hụt calo (calo nạp < calo tiêu thụ). Ăn nhiều protein và rau xanh.<br>2. Tăng cân: Ăn dư thừa calo, chia nhỏ thành 5-6 bữa một ngày.<br>3. Hãy uống tối thiểu 2 lít nước mỗi ngày để hỗ trợ trao đổi chất.", "bot");
+                showGeneralMenu();
+			} else if (lowerInput.includes('mẹo') || lowerInput.includes('giảm cân') || lowerInput.includes('tăng cân')) {
+                appendMessage("🥗 <b>Mẹo cốt lõi:</b><br>1. Kiểm soát calo nạp vào so với calo tiêu thụ.<br>2. Ngủ đủ giấc từ 7-8 tiếng để hormone cân bằng.<br>3. Uống đủ nước.<br><i>Nếu đã thử những điều này mà cân nặng không đổi, hãy cho tôi biết!</i>", "bot");
+                showGeneralMenu();
+            } else if (lowerInput.includes('chào') || lowerInput.includes('hi')) {
+                appendMessage("Xin chào! Tôi có thể hỗ trợ gì về chỉ số cơ thể, mẹo dinh dưỡng hay bài tập tập luyện hôm nay?", "bot");
+                showGeneralMenu();
+            } else {
+                appendMessage("Tôi chưa hiểu rõ câu hỏi này. Bạn vui lòng chọn các tính năng hỗ trợ có sẵn bên dưới nhé!", "bot");
+                showGeneralMenu();
+            }
+        }
+
+        // MENU GỢI Ý CHUNG XUẤT HIỆN Ở CUỐI
+        function showGeneralMenu() {
+            setTimeout(() => {
+                // Sửa nút Tính BMI trong menu gợi ý thành mở trực tiếp link sang trang mới
+                const menuHtml = `<div class="chat-options">
+                    <a href="duong-dan-trang-tinh-bmi-cua-ban.html" target="_blank" class="opt-btn" style="display: inline-block; text-decoration: none; text-align: center;">📊 Tính BMI</a>
+                    <button class="opt-btn" onclick="selectOption('Mẹo tập luyện')">🏋️ Mẹo tập luyện</button>
+					<button class="opt-btn" onclick="selectOption('Mẹo kiểm soát cân nặng')">🥗 Mẹo kiểm soát cân nặng</button>
+                    <button class="opt-btn" onclick="selectOption('Tại sao áp dụng không hiệu quả?')">❓Mẹo không hiệu quả?</button>
+                </div>`;
+                const messagesContainer = document.getElementById('chatMessages');
+                
+                const menuDiv = document.createElement('div');
+                menuDiv.style.alignSelf = "flex-start";
+                menuDiv.innerHTML = menuHtml;
+                messagesContainer.appendChild(menuDiv);
+                scrollToBottom();
+            }, 1000);
+        }
+</script>
+<script>
+// Lấy thẻ button theo ID
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Lắng nghe sự kiện cuộn chuột của người dùng
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  // Nếu cuộn xuống hơn 20px từ đỉnh trang
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block"; // Hiện nút
+  } else {
+    scrollToTopBtn.style.display = "none";  // Ẩn nút
+  }
+}
+
+// Định nghĩa hành động khi bấm vào nút
+scrollToTopBtn.addEventListener("click", function() {
+  // Cuộn về vị trí x=0, y=0
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Đảm bảo hiệu ứng trượt mượt mà
+  });
+});	
+</script>
+</body>
+</body>
+</html>
+

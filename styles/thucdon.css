@@ -1,0 +1,259 @@
+@charset "utf-8";
+.thucdon-main {
+    padding: 3rem 0;
+}
+
+.page-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+}
+
+.page-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color:#124D29;
+}
+
+.page-intro .intro-text {
+    color:#124D29;
+    line-height: 1.8;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(17, 45, 78, 0.08);
+    box-shadow: 0 22px 50px rgba(17, 45, 78, 0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(17, 45, 78, 0.16);
+    box-shadow: 0 28px 60px rgba(17, 45, 78, 0.12);
+}
+
+.category-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color:#124D29;
+}
+
+.category-card p {
+    color: #2ED480;
+    line-height: 1.75;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 20, 35, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 1.5rem;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+body.modal-active .khung {
+    filter: blur(6px);
+    pointer-events: none;
+}
+
+.category-overlay {
+    z-index: 2000;
+}
+
+.detail-overlay {
+    z-index: 2100;
+}
+
+#closeDishOverlay {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.modal {
+    width: min(100%, 960px);
+    background: #ffffff;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+    max-height: min(90vh, 900px);
+    overflow-y: auto;
+    box-shadow: 0 36px 80px rgba(17, 45, 78, 0.15);
+	color: #124D29;
+}
+
+.modal-large {
+    max-width: 980px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem;
+}
+
+.modal-header p {
+    margin: 0;
+    color: #2ED480;
+    line-height: 1.7;
+}
+
+.close-btn {
+    border: none;
+    background: #f0f3f7;
+    color:#124D29;
+    font-size: 1.75rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.close-btn:hover {
+    background: #e2e8f0;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.dish-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1rem;
+    background: #f7fbff;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(15, 32, 70, 0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 180px;
+}
+
+.dish-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 40px rgba(15, 32, 70, 0.12);
+}
+
+.dish-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dish-card-body {
+    padding: 1.25rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dish-card-title {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    color:#20D279;
+}
+
+.dish-card-text {
+    margin: 0;
+    color:#124D29;
+    line-height: 1.6;
+}
+
+.dish-detail {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.dish-detail img {
+    min-height: 420px;
+}
+
+.dish-detail img {
+    width: 100%;
+    border-radius: 1.25rem;
+    object-fit: cover;
+    min-height: 320px;
+    box-shadow: 0 20px 45px rgba(15, 32, 70, 0.1);
+}
+
+.dish-info h3 {
+    margin-top: 0;
+    color:#124D29;
+}
+
+.dish-info p {
+    color:#124D29;
+    line-height: 1.8;
+}
+
+.macro-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.macro-list li {
+    background: #f3f8ff;
+    color:#124D29 ;
+    padding: 0.9rem 1rem;
+    border-radius: 0.85rem;
+    border: 1px solid rgba(17, 45, 78, 0.08);
+}
+
+@media (max-width: 900px) {
+    .dish-grid {
+        grid-template-columns: 1fr;
+    }
+    .dish-detail {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .page-intro h1 {
+        font-size: 2rem;
+    }
+    .modal {
+        padding: 1rem;
+    }
+    .modal-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .close-btn {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+}

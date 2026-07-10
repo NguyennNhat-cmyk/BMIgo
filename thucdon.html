@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>BMIgo - Thực đơn nhà tốt cho sức khỏe</title>
+    <script type="text/javascript" src="scripts/taitrang.js"></script>
+    <script type="text/javascript" src="scripts/thucdon.js" defer></script>
+    <link href="styles/default.css" type="text/css" rel="stylesheet">
+    <link href="styles/thucdon.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="khung">
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="hinhanh/logo.png" width="60" height="60" alt=""/><a>BMIgo</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+            <a href="index.html" class="active">Trang chủ</a>
+			<a href="vechungtoi.html">Về chúng tôi</a>
+            <a href="BMI.html">Tính BMI</a>
+            <a href="thucdon.html">Thực đơn</a>
+            <a href="tapluyen.html">Tập luyện</a>
+			<a href="tuvan.html">Tư vấn</a>
+			<a href="lienhe.html">Liên hệ</a>
+	  </nav>
+            <div class="nav-actions">
+                <div class="user-nav">
+                    <a href="dangky.html" class="user-nav__trigger" aria-expanded="false">
+                        <span class="user-nav__icon">👤</span>
+                        <span class="user-nav__label">Tài khoản</span>
+                    </a>
+                    <div class="user-nav__menu" hidden>
+                        <button type="button" class="user-nav__btn--info">Thông tin</button>
+                        <button type="button" class="user-nav__btn--logout">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="thucdon-main">
+        <section class="page-intro container">
+            <h1>Thực đơn nhà tốt cho sức khỏe</h1>
+            <p class="intro-text">Khám phá các món ăn dễ làm, ngon miệng và phù hợp với nhiều mục tiêu: tốt cho cơ thể, giảm cân, tăng cơ hoặc nổi bật trong tuần.</p>
+        </section>
+
+        <section id="categories" class="categories container">
+            <article class="category-card" data-category="goodBody">
+                <h2>Các món ngon tốt cho cơ thể và dễ làm</h2>
+                <p>Những món nhẹ nhàng, giàu dinh dưỡng và thích hợp cho cả gia đình.</p>
+            </article>
+            <article class="category-card" data-category="weightLoss">
+                <h2>Các món dành cho người cần giảm cân</h2>
+                <p>Món ăn ít calo, nhiều protein và chất xơ để giữ no lâu.</p>
+            </article>
+            <article class="category-card" data-category="muscleGain">
+                <h2>Các món dành cho người muốn tăng cơ</h2>
+                <p>Đầy đủ macro, hỗ trợ phục hồi và xây dựng cơ bắp hiệu quả.</p>
+            </article>
+            <article class="category-card" data-category="weeklyHighlight">
+                <h2>Các món ăn nổi bật trong tuần</h2>
+                <p>Lựa chọn đặc sắc, dễ làm và phù hợp để làm mới menu hằng ngày.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col brand-col">
+        <a class="logo footer-logo">
+          <img src="hinhanh/logo.png" alt="BMIgo Logo" class="logo-img" width="100px" height="100px">
+		 <p class="footer-about">BMIgo: hiểu rõ cơ thể mình, đơn giản hóa hành trình kiểm soát cân nặng, xây dựng lối sống lành mạnh!</p>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Danh mục</h4>
+        <ul>
+          <li><a href="BMI.html">Tính BMI</a></li>
+          <li><a href="thucdon.html">Thực đơn hàng tuần</a></li>
+          <li><a href="tapluyen.html">Các bài tập đơn giản</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hỗ trợ</h4>
+        <ul>
+          <li><a href="lienhe.html">Trung tâm hỗ trợ</a></li>
+          <li><a href="tuvan.html">Hướng dẫn tập luyện</a></li>
+          <li><a href="tuvan.html">Tư vấn món ăn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©  2026 BMIgo. Tất cả các quyền được bảo lưu</p>
+      <p>Page được tạo nên với sức khỏe của người Việt là tiêu chí hàng đầu</p>
+	  <p>Lưu ý: Chỉ số BMI chỉ mang tính chất tham khảo và không thay thế cho các chẩn đoán y khoa chuyên sâu.</p>
+    </div>
+	<button class="scrollToTopBtn" id="scrollToTopBtn" title="Lên đầu trang">^</button>
+  </footer>
+</div>
+
+<div class="overlay category-overlay" id="categoryOverlay" aria-hidden="true">
+    <div class="modal">
+        <div class="modal-header">
+            <div>
+                <h2 id="categoryTitle"></h2>
+                <p id="categoryDescription"></p>
+            </div>
+            <button type="button" class="close-btn" id="closeCategoryOverlay" aria-label="Đóng">×</button>
+        </div>
+        <div class="dish-grid" id="dishGrid"></div>
+    </div>
+</div>
+
+<div class="overlay detail-overlay" id="dishOverlay" aria-hidden="true">
+    <div class="modal modal-large">
+        <div class="modal-header">
+            <div>
+                <h2 id="dishTitle"></h2>
+                <p id="dishSubtitle"></p>
+            </div>
+            <button type="button" class="close-btn" id="closeDishOverlay" aria-label="Đóng">×</button>
+        </div>
+        <div class="dish-detail">
+            <img id="dishImage" src="" alt="Ảnh món ăn">
+            <div class="dish-info">
+                <h3>Thành phần</h3>
+                <p id="dishIngredients"></p>
+                <h3>Cách chuẩn bị</h3>
+                <p id="dishPrep"></p>
+                <h3>Cách chế biến</h3>
+                <p id="dishCooking"></p>
+                <h3>Thời gian chế biến</h3>
+                <p id="dishTime"></p>
+                <h3>Thông số macro</h3>
+                <ul class="macro-list" id="dishMacros"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="scripts/user-nav.js"></script>
+<script>
+// Lấy thẻ button theo ID
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Lắng nghe sự kiện cuộn chuột của người dùng
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  // Nếu cuộn xuống hơn 20px từ đỉnh trang
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block"; // Hiện nút
+  } else {
+    scrollToTopBtn.style.display = "none";  // Ẩn nút
+  }
+}
+
+// Định nghĩa hành động khi bấm vào nút
+scrollToTopBtn.addEventListener("click", function() {
+  // Cuộn về vị trí x=0, y=0
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Đảm bảo hiệu ứng trượt mượt mà
+  });
+});	
+</script>	
+</html>

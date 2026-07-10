@@ -1,0 +1,283 @@
+	<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Bmigo - Ứng dụng đếm calo bằng AI và lên kế hoạch ăn kiêng giảm cân hiệu quả</title>
+	<script type="text/javascript" src="scripts/taitrang.js"></script>
+	<link href="styles/default.css" type="text/css" rel="stylesheet">
+	<link href="styles/index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+	<header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="hinhanh/logo.png" width="60" height="60" alt=""/><a>BMIgo</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+            <a href="index.html" class="active">Trang chủ</a>
+			<a href="vechungtoi.html">Về chúng tôi</a>
+            <a href="BMI.html">Tính BMI</a>
+            <a href="thucdon.html">Thực đơn</a>
+            <a href="tapluyen.html">Tập luyện</a>
+			<a href="tuvan.html">Tư vấn</a>
+			<a href="lienhe.html">Liên hệ</a>
+	  </nav>
+            <div class="nav-actions">
+                <div class="user-nav">
+                    <a href="dangky.html" class="user-nav__trigger" aria-expanded="false">
+                        <span class="user-nav__icon">👤</span>
+                        <span class="user-nav__label">Tài khoản</span>
+                    </a>
+                    <div class="user-nav__menu" hidden>
+                        <button type="button" class="user-nav__btn--info">Thông tin</button>
+                        <button type="button" class="user-nav__btn--logout">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="banner1"></div>
+	<section class="bmi-intro-section">
+<div class="bmi-intro-container">
+        <div class="bmi-intro-content">
+            <span class="sub-title">Về BMIgo</span>
+			<br>
+            <h2>Người bạn đồng hành quản lý vóc dáng & sức khỏe</h2>
+            <p>
+                Trong cuộc sống hiện đại bận rộn, việc kiểm soát cân nặng và thấu hiểu thể trạng bản thân là bước đầu tiên để xây dựng một lối sống lành mạnh. 
+                <strong>BMIgo</strong> ra đời với sứ mệnh mang đến cho bạn một công cụ tính chỉ số khối cơ thể (BMI) trực tuyến 
+                <strong>nhanh chóng, chính xác và hoàn toàn miễn phí</strong>.
+            </p>
+            <p>
+                Không chỉ dừng lại ở những con số khô khan, trang web của chúng tôi đóng vai trò như một trợ lý sức khỏe kỹ thuật số. 
+                Dựa trên kết quả BMI của bạn, hệ thống sẽ đưa ra những phân tích chuyên sâu cùng lời khuyên hữu ích về chế độ dinh dưỡng 
+                và lộ trình tập luyện, giúp bạn từng bước đạt được vóc dáng lý tưởng và một cơ thể tràn đầy năng lượng.
+            </p>
+            <div class="intro-badges">
+                <div class="badge-item">🎯 Chính xác (Chuẩn WHO)</div>
+                <div class="badge-item">⚡ Kết quả trong 3 giây</div>
+                <div class="badge-item">🔒 Bảo mật dữ liệu</div>
+            </div>
+        </div>
+
+        <div class="bmi-intro-visual">
+            <div class="visual-box">
+                <h3>Công thức tính của chúng tôi</h3>
+                <div class="formula-card">
+                    <p class="formula-title">Chỉ số BMI được tính như thế nào?</p>
+                    <div class="formula-math">
+                        BMI = <span class="fraction"><span class="top">Cân nặng (kg)</span><span class="bottom">Chiều cao² (m)</span></span>
+                    </div>
+                </div>
+                <p class="formula-note">*Áp dụng bảng chuẩn dành riêng cho thể trạng người Châu Á.</p>
+            </div>
+        </div>
+    </div>
+		<br>
+	<section class="features-section">
+            <div>
+                <h2>Các tính năng chính</h2>
+                <ul>
+                    <li><strong>Tính toán BMI chính xác:</strong> Nhập chiều cao và cân nặng của bạn để nhận kết quả BMI và phân loại trọng lượng ngay lập tức.</li>
+                    <li><strong>Theo dõi tiến trình:</strong> Ghi lại BMI của bạn theo thời gian để theo dõi sự thay đổi và duy trì động lực.</li>
+                    <li><strong>Lời khuyên dinh dưỡng được cá nhân hóa:</strong> Dựa trên kết quả BMI và mục tiêu của bạn, chúng tôi đề xuất các món ăn và kế hoạch ăn uống lành mạnh.</li>
+                    <li><strong>Gợi ý bài tập:</strong> Khám phá các bài tập và chương trình tập luyện phù hợp với mức độ thể chất của bạn để cải thiện sức khỏe tổng thể.</li>
+                    <li><strong>Giao diện thân thiện với người dùng:</strong> Trải nghiệm dễ sử dụng, cho phép bạn tập trung vào những gì quan trọng nhất - sức khỏe của mình.</li>
+                </ul>
+            </div>
+            <div class="features-video-box">
+                <video class="features-video" controls autoplay muted loop playsinline poster="hinhanh/1.png">
+                    <source src="hinhanh/video.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ phát video.
+                </video>
+            </div>
+</section>
+    <section id="about" class="bmi-info">
+        <div class="info-container">
+            <div class="info-text">
+                <h2>Chỉ số BMI là gì?</h2>
+                <p>BMI (Body Mass Index) hay còn gọi là <strong>Chỉ số khối cơ thể</strong>, được tính bằng công thức cân nặng (kg) chia cho bình phương chiều cao (mét).</p>
+                <br>
+                <p>Đây là công cụ nhanh chóng và phổ biến nhất được các bác sĩ và chuyên gia dinh dưỡng sử dụng để xác định một người đang bị thiếu cân, thừa cân hay ở mức lý tưởng.</p>
+            </div>
+            <div id="standards" class="info-table">
+                <h3>Bảng Phân Loại BMI</h3>
+				<h4>(Dành cho người Châu Á)</h4>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chỉ số BMI</th>
+                            <th>Phân loại</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dưới 18.5</td>
+                            <td style="color: #3a86ff; font-weight: bold;">Gầy (Thiếu cân)</td>
+                        </tr>
+                        <tr>
+                            <td>18.5 - 22.9</td>
+                            <td style="color: #38b000; font-weight: bold;">Bình thường (Lý tưởng)</td>
+                        </tr>
+                        <tr>
+                            <td>23.0 - 24.9</td>
+                            <td style="color: #ff9f1c; font-weight: bold;">Thừa cân</td>
+                        </tr>
+                        <tr>
+                            <td>Từ 25.0 trở lên</td>
+                            <td style="color: #e63946; font-weight: bold;">Béo phì</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+<section id="features" class="features">
+        <h2 class="section-title">Tại sao bạn nên chọn BMIgo?</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="icon">⚡</div>
+                <h3>Tính toán siêu tốc</h3>
+                <p>Chỉ cần nhập chiều cao và cân nặng, hệ thống sẽ trả kết quả chính xác ngay tức thì.</p>
+            </div>
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Đánh giá chuẩn WHO</h3>
+                <p>Hệ thống tham chiếu kết quả dựa trên bảng tiêu chuẩn của Tổ chức Y tế Thế giới.</p>
+            </div>
+            <div class="card">
+                <div class="icon">🥗</div>
+                <h3>Lời khuyên sức khỏe</h3>
+                <p>Nhận ngay gợi ý chế độ ăn uống và tập luyện phù hợp với từng trạng thái thể trạng.</p>
+            </div>
+        </div>
+    </section>
+		<br>
+<div class="testimonial-container">
+    <h2 class="heading">Đánh giá của khách hàng về chúng tôi</h2>
+    
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="content">"Giao diện cực kỳ dễ dùng! Chỉ cần nhập chiều cao và cân nặng là ra ngay kết quả BMI kèm theo lời khuyên dinh dưỡng rất chi tiết. Nhờ trang web này mà mình biết mình đang bị thiếu cân và đã lên kế hoạch tăng cân hợp lý."</p>
+            <div class="author">Nguyễn Minh Hải</div>
+            <div class="role">Nhân viên văn phòng (26 tuổi)</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="content">"Là một người đang trong chế độ giảm cân, mình truy cập trang web này hàng tuần để theo dõi chỉ số. Biểu đồ phân loại mức độ béo phì rất trực quan, giúp mình có thêm động lực để tập luyện mỗi ngày. Rất đề xuất!"</p>
+            <div class="author">Trần Thị Thu Hà</div>
+            <div class="role">Huấn luyện viên Yoga tự do</div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">★★★★☆</div>
+            <p class="content">"Trang web load nhanh, tính toán chính xác. Điểm mình thích nhất là phần gợi ý lượng calo cần nạp dựa trên chỉ số BMI hiện tại. Nếu có thêm tính năng lưu lại lịch sử các lần đo trước thì hoàn hảo hơn nữa."</p>
+            <div class="author">Lê Hoàng Nam</div>
+            <div class="role">Sinh viên (21 tuổi)</div>
+        </div>
+    </div>
+</div>
+<br>
+<footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col brand-col">
+        <a class="logo footer-logo">
+          <img src="hinhanh/logo.png" alt="BMIgo Logo" class="logo-img" width="100px" height="100px">
+		 <p class="footer-about">BMIgo: hiểu rõ cơ thể mình, đơn giản hóa hành trình kiểm soát cân nặng, xây dựng lối sống lành mạnh!</p>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Danh mục</h4>
+        <ul>
+          <li><a href="BMI.html">Tính BMI</a></li>
+          <li><a href="thucdon.html">Thực đơn hàng tuần</a></li>
+          <li><a href="tapluyen.html">Các bài tập đơn giản</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hỗ trợ</h4>
+        <ul>
+          <li><a href="lienhe.html">Trung tâm hỗ trợ</a></li>
+          <li><a href="tuvan.html">Hướng dẫn tập luyện</a></li>
+          <li><a href="tuvan.html">Tư vấn món ăn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©  2026 BMIgo. Tất cả các quyền được bảo lưu</p>
+      <p>Page được tạo nên với sức khỏe của người Việt là tiêu chí hàng đầu</p>
+	  <p>Lưu ý: Chỉ số BMI chỉ mang tính chất tham khảo và không thay thế cho các chẩn đoán y khoa chuyên sâu.</p>
+    </div>
+	<button class="scrollToTopBtn" id="scrollToTopBtn" title="Lên đầu trang">^</button>
+  </footer>
+<script src="scripts/user-nav.js"></script>
+</body>
+<body>
+<div class="chat-badge" id="chatBadge" onclick="toggleChat()">💬</div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Trợ Lý Sức Khỏe & BMI 🌿</span>
+            <span class="close-btn" onclick="toggleChat()">×</span>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="msg bot">
+                Xin chào! Tôi có thể giúp gì cho hành trình kiểm soát cân nặng và sức khỏe của bạn hôm nay?
+                <div class="chat-options">
+                    <button class="opt-btn" onclick="selectOption('Tính chỉ số BMI')">📊 Tính BMI</button>
+					<button class="opt-btn" onclick="selectOption('Mẹo tập luyện')">🏋️ Mẹo tập luyện</button>
+                    <button class="opt-btn" onclick="selectOption('Mẹo kiểm soát cân nặng')">🥗 Mẹo kiểm soát cân nặng</button>
+                    <button class="opt-btn" onclick="selectOption('Tại sao áp dụng mẹo không hiệu quả?')">❓ Mẹo không hiệu quả?</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">➔</button>
+        </div>
+	</div>
+<script>
+// Lấy thẻ button theo ID
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Lắng nghe sự kiện cuộn chuột của người dùng
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  // Nếu cuộn xuống hơn 20px từ đỉnh trang
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block"; // Hiện nút
+  } else {
+    scrollToTopBtn.style.display = "none";  // Ẩn nút
+  }
+}
+
+// Định nghĩa hành động khi bấm vào nút
+scrollToTopBtn.addEventListener("click", function() {
+  // Cuộn về vị trí x=0, y=0
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Đảm bảo hiệu ứng trượt mượt mà
+  });
+});	
+</script>
+</body>
+</html>
+

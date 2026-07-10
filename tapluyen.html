@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bmigo - Ứng dụng đếm calo bằng AI và lên kế hoạch ăn kiêng giảm cân hiệu quả</title>
+	<script type="text/javascript" src="scripts/taitrang.js"></script>
+	<script type="text/javascript" src="scripts/tapluyen.js"></script>
+    <link href="styles/default.css" type="text/css" rel="stylesheet">
+    <link href="styles/tapluyen.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="khung">
+    <div class="page-wrapper">
+        <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="hinhanh/logo.png" width="60" height="60" alt=""/><a>BMIgo</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+            <a href="index.html" class="active">Trang chủ</a>
+			<a href="vechungtoi.html">Về chúng tôi</a>
+            <a href="BMI.html">Tính BMI</a>
+            <a href="thucdon.html">Thực đơn</a>
+            <a href="tapluyen.html">Tập luyện</a>
+			<a href="tuvan.html">Tư vấn</a>
+			<a href="lienhe.html">Liên hệ</a>
+	  </nav>
+            <div class="nav-actions">
+                <div class="user-nav">
+                    <a href="dangky.html" class="user-nav__trigger" aria-expanded="false">
+                        <span class="user-nav__icon">👤</span>
+                        <span class="user-nav__label">Tài khoản</span>
+                    </a>
+                    <div class="user-nav__menu" hidden>
+                        <button type="button" class="user-nav__btn--info">Thông tin</button>
+                        <button type="button" class="user-nav__btn--logout">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+		<main class="workout-section" id="workout">
+            <div class="workout-header">
+                <span class="eyebrow">Tập luyện</span>
+                <h1>Các chương trình luyện tập cho mọi mục tiêu</h1>
+                <p>Chọn một phần để xem chi tiết bài tập, hình ảnh minh họa, số lần và số rep phù hợp.</p>
+            </div>
+
+            <div class="category-grid">
+                <article class="category-card">
+                    <div class="category-top">
+                        <span class="category-icon">🏠</span>
+                        <h3>Các bài tập đơn giản tại nhà</h3>
+                    </div>
+                    <p>Thực hiện dễ dàng với trọng lượng cơ thể, phù hợp cho người mới bắt đầu.</p>
+                    <button class="category-button" data-category="simple">Xem bài tập</button>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-top">
+                        <span class="category-icon">🔥</span>
+                        <h3>Các bài tập nâng cao</h3>
+                    </div>
+                    <p>Thách thức sức bền và sức mạnh cho người đã có nền tảng tập luyện.</p>
+                    <button class="category-button" data-category="advanced">Xem bài tập</button>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-top">
+                        <span class="category-icon">⚖️</span>
+                        <h3>Các bài tập nếu bạn muốn giảm cân</h3>
+                    </div>
+                    <p>Tập trung đốt mỡ, tăng nhịp tim và cải thiện sức khỏe tim mạch.</p>
+                    <button class="category-button" data-category="weightloss">Xem bài tập</button>
+                </article>
+
+                <article class="category-card">
+                    <div class="category-top">
+                        <span class="category-icon">💪</span>
+                        <h3>Các bài tập nếu bạn muốn tăng cơ</h3>
+                    </div>
+                    <p>Bài tập kháng lực giúp xây dựng cơ bắp và tăng sức mạnh cơ thể.</p>
+                    <button class="category-button" data-category="bulking">Xem bài tập</button>
+                </article>
+            </div>
+        </main>
+
+        <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col brand-col">
+        <a class="logo footer-logo">
+          <img src="hinhanh/logo.png" alt="BMIgo Logo" class="logo-img" width="100px" height="100px">
+		 <p class="footer-about">BMIgo: hiểu rõ cơ thể mình, đơn giản hóa hành trình kiểm soát cân nặng, xây dựng lối sống lành mạnh!</p>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Danh mục</h4>
+        <ul>
+          <li><a href="BMI.html">Tính BMI</a></li>
+          <li><a href="thucdon.html">Thực đơn hàng tuần</a></li>
+          <li><a href="tapluyen.html">Các bài tập đơn giản</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hỗ trợ</h4>
+        <ul>
+          <li><a href="lienhe.html">Trung tâm hỗ trợ</a></li>
+          <li><a href="tuvan.html">Hướng dẫn tập luyện</a></li>
+          <li><a href="tuvan.html">Tư vấn món ăn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©  2026 BMIgo. Tất cả các quyền được bảo lưu</p>
+      <p>Page được tạo nên với sức khỏe của người Việt là tiêu chí hàng đầu</p>
+	  <p>Lưu ý: Chỉ số BMI chỉ mang tính chất tham khảo và không thay thế cho các chẩn đoán y khoa chuyên sâu.</p>
+    </div>
+	<button class="scrollToTopBtn" id="scrollToTopBtn" title="Lên đầu trang">^</button>
+  </footer>
+</div>
+</div>
+<div class="popup-overlay hidden" id="exercisePopup" aria-hidden="true">
+    <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+        <button type="button" class="popup-close" id="popupClose" aria-label="Đóng">×</button>
+        <div class="popup-header">
+            <h2 id="popupTitle"></h2>
+            <p id="popupDescription"></p>
+        </div>
+        <div class="popup-exercises" id="popupExercises"></div>
+    </div>
+</div>
+</body>
+<body><div class="chat-badge" id="chatBadge" onclick="toggleChat()">💬</div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Trợ Lý Sức Khỏe & BMI 🌿</span>
+            <span class="close-btn" onclick="toggleChat()">×</span>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="msg bot">
+                Xin chào! Tôi có thể giúp gì cho hành trình kiểm soát cân nặng và sức khỏe của bạn hôm nay?
+                <div class="chat-options">
+                    <button class="opt-btn" onclick="selectOption('Tính chỉ số BMI')">📊 Tính BMI</button>
+					<button class="opt-btn" onclick="selectOption('Mẹo tập luyện')">🏋️ Mẹo tập luyện</button>
+                    <button class="opt-btn" onclick="selectOption('Mẹo kiểm soát cân nặng')">🥗 Mẹo kiểm soát cân nặng</button>
+                    <button class="opt-btn" onclick="selectOption('Tại sao áp dụng mẹo không hiệu quả?')">❓ Mẹo không hiệu quả?</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">➔</button>
+        </div>
+	</div>
+<script>
+// Lấy thẻ button theo ID
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Lắng nghe sự kiện cuộn chuột của người dùng
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  // Nếu cuộn xuống hơn 20px từ đỉnh trang
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block"; // Hiện nút
+  } else {
+    scrollToTopBtn.style.display = "none";  // Ẩn nút
+  }
+}
+
+// Định nghĩa hành động khi bấm vào nút
+scrollToTopBtn.addEventListener("click", function() {
+  // Cuộn về vị trí x=0, y=0
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Đảm bảo hiệu ứng trượt mượt mà
+  });
+});	
+</script>
+<script src="scripts/user-nav.js"></script></body>
+</html>

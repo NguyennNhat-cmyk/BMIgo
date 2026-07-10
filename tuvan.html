@@ -1,0 +1,296 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<title>Bmigo - Ứng dụng đếm calo bằng AI và lên kế hoạch ăn kiêng giảm cân hiệu quả</title>
+	<script type="text/javascript" src="scripts/taitrang.js"></script>
+	<link href="styles/default.css" type="text/css" rel="stylesheet">
+	<link href="styles/tuvan.css"type="text/css" rel="stylesheet">
+</head>
+<body>
+<div class="khung">	
+<header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="hinhanh/logo.png" width="60" height="60" alt=""/><a>BMIgo</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+            <a href="index.html" class="active">Trang chủ</a>
+			<a href="vechungtoi.html">Về chúng tôi</a>
+            <a href="BMI.html">Tính BMI</a>
+            <a href="thucdon.html">Thực đơn</a>
+            <a href="tapluyen.html">Tập luyện</a>
+			<a href="tuvan.html">Tư vấn</a>
+			<a href="lienhe.html">Liên hệ</a>
+	  </nav>
+            <div class="nav-actions">
+                <div class="user-nav">
+                    <a href="dangky.html" class="user-nav__trigger" aria-expanded="false">
+                        <span class="user-nav__icon">👤</span>
+                        <span class="user-nav__label">Tài khoản</span>
+                    </a>
+                    <div class="user-nav__menu" hidden>
+                        <button type="button" class="user-nav__btn--info">Thông tin</button>
+                        <button type="button" class="user-nav__btn--logout">Đăng xuất</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<body>
+
+<div class="form-container">
+    <h1>Đăng Ký Tư Vấn Sức Khỏe</h1>
+    <p class="description">Chào bạn, để chúng tôi có thể hiểu rõ nhất về tình trạng hiện tại và đưa ra những lời khuyên phù hợp, bạn vui lòng điền đầy đủ thông tin vào form dưới đây nhé!</p>
+
+    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã gửi thông tin! Chúng tôi sẽ liên hệ lại sớm nhất.');">
+        
+        <!-- SECTION I -->
+        <div class="section-title">I. Thông tin cá nhân</div>
+        
+        <div class="form-group">
+            <label for="fullname">Họ và tên <span style="color: red;">*</span></label>
+            <input type="text" id="fullname" class="form-control" placeholder="Nguyễn Văn A" required>
+        </div>
+
+        <div class="grid-3">
+            <div class="form-group">
+                <label for="birthyear">Năm sinh <span style="color: red;">*</span></label>
+                <input type="number" id="birthyear" class="form-control" placeholder="1995" min="1900" max="2026" required>
+            </div>
+            <div class="form-group">
+                <label>Giới tính <span style="color: red;">*</span></label>
+                <div class="options-group" style="flex-direction: row; padding-top: 10px;">
+                    <label class="radio-label"><input type="radio" name="gender" value="Nam" required> Nam</label>
+                    <label class="radio-label"><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                    <label class="radio-label"><input type="radio" name="gender" value="Khác"> Khác</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại <span style="color: red;">*</span></label>
+                <input type="tel" id="phone" class="form-control" placeholder="0901234567" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Địa chỉ Email</label>
+            <input type="email" id="email" class="form-control" placeholder="nguyenvana@gmail.com">
+        </div>
+
+        <div class="form-group">
+            <label for="job">Nghề nghiệp / Môi trường làm việc</label>
+            <input type="text" id="job" class="form-control" placeholder="Nhân viên văn phòng, ngồi nhiều...">
+        </div>
+
+        <!-- SECTION II -->
+        <div class="section-title">II. Chỉ số cơ thể (Nếu biết)</div>
+        
+        <div class="grid-3">
+            <div class="form-group">
+                <label for="height">Chiều cao (cm)</label>
+                <input type="number" id="height" class="form-control" placeholder="165">
+            </div>
+            <div class="form-group">
+                <label for="weight">Cân nặng (kg)</label>
+                <input type="number" id="weight" class="form-control" placeholder="60">
+            </div>
+            <div class="form-group">
+                <label for="bloodpressure">Huyết áp</label>
+                <select id="bloodpressure" class="form-control">
+                    <option value="">-- Chọn tình trạng --</option>
+                    <option value="Bình thường">Bình thường</option>
+                    <option value="Cao">Cao</option>
+                    <option value="Thấp">Thấp</option>
+                    <option value="Không rõ">Không rõ</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- SECTION III -->
+        <div class="section-title">III. Tình trạng sức khỏe & Lý do tư vấn</div>
+        
+        <div class="form-group">
+            <label>1. Mục tiêu chính của bạn khi tìm đến tư vấn là gì? <span style="color: red;">*</span> (Có thể chọn nhiều)</label>
+            <div class="options-group">
+                <label class="checkbox-label"><input type="checkbox" name="goal" value="nutrition"> Cải thiện chế độ dinh dưỡng, tăng/giảm cân</label>
+                <label class="checkbox-label"><input type="checkbox" name="goal" value="symptoms"> Giải quyết các triệu chứng khó chịu (đau mỏi, mất ngủ...)</label>
+                <label class="checkbox-label"><input type="checkbox" name="goal" value="workout"> Tư vấn xây dựng chế độ tập luyện phù hợp</label>
+                <label class="checkbox-label"><input type="checkbox" name="goal" value="chronic"> Kiểm tra / quản lý các bệnh lý mãn tính</label>
+                <label class="checkbox-label"><input type="checkbox" name="goal" value="mental"> Chăm sóc sức khỏe tinh thần (stress, lo âu...)</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>2. Bạn đang gặp phải những triệu chứng nào sau đây?</label>
+            <div class="options-group">
+                <label class="checkbox-label"><input type="checkbox" name="symptom" value="fatigue"> Mệt mỏi kéo dài, thiếu năng lượng</label>
+                <label class="checkbox-label"><input type="checkbox" name="symptom" value="insomnia"> Khó ngủ, mất ngủ, ngủ không sâu giấc</label>
+                <label class="checkbox-label"><input type="checkbox" name="symptom" value="headache"> Đau đầu, chóng mặt, hoa mắt</label>
+                <label class="checkbox-label"><input type="checkbox" name="symptom" value="pain"> Đau mỏi vai gáy, xương khớp, lưng</label>
+                <label class="checkbox-label"><input type="checkbox" name="symptom" value="digestion"> Đầy hơi, khó tiêu, đau dạ dày, táo bón</label>
+                <label class="checkbox-label"><input type="checkbox" name="symptom" value="stress"> Stress, căng thẳng, dễ cáu gắt</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="history">3. Tiền sử bệnh lý & Thuốc đang sử dụng (Nếu có)</label>
+            <textarea id="history" class="form-control" rows="3" placeholder="Ví dụ: Tiểu đường tuýp 2, dị ứng hải sản, đang uống thực phẩm chức năng bổ não..."></textarea>
+        </div>
+
+        <!-- SECTION IV -->
+        <div class="section-title">IV. Thói quen sinh hoạt hàng ngày</div>
+        
+        <div class="form-group">
+            <label>1. Chế độ dinh dưỡng & Sinh hoạt chưa tốt (Nếu có)</label>
+            <div class="options-group">
+                <label class="checkbox-label"><input type="checkbox" name="habit" value="latenight"> Hay ăn đêm</label>
+                <label class="checkbox-label"><input type="checkbox" name="habit" value="skip"> Thường xuyên bỏ bữa (đặc biệt là bữa sáng)</label>
+                <label class="checkbox-label"><input type="checkbox" name="habit" value="unhealthy"> Ăn nhiều đồ dầu mỡ, đồ ngọt, thức ăn nhanh</label>
+                <label class="checkbox-label"><input type="checkbox" name="habit" value="alcohol"> Uống nhiều rượu bia, nước ngọt có ga</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exercise">2. Chế độ vận động, thể dục thể thao</label>
+            <select id="exercise" class="form-control">
+                <option value="Không tập">Không tập thể dục</option>
+                <option value="Ít">Ít (1 - 2 lần / tuần)</option>
+                <option value="Thường xuyên">Thường xuyên (Trên 3 lần / tuần)</option>
+            </select>
+        </div>
+
+        <!-- SECTION V -->
+        <div class="section-title">V. Mong muốn & Hình thức tư vấn</div>
+
+        <div class="form-group">
+            <label for="note">Lời nhắn hoặc câu hỏi cụ thể dành cho chuyên gia:</label>
+            <textarea id="note" class="form-control" rows="3" placeholder="Ghi rõ vấn đề bạn đang lo lắng nhất lúc này..."></textarea>
+        </div>
+
+        <div class="grid-2" style="grid-template-columns: 1fr 1fr;">
+            <div class="form-group">
+                <label for="contact-method">Hình thức tư vấn</label>
+                <select id="contact-method" class="form-control">
+                    <option value="Điện thoại">Gọi điện thoại trực tiếp</option>
+                    <option value="Zalo/Messenger">Nhắn tin Zalo / Messenger</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="time-slot">Khung giờ thuận tiện</label>
+                <select id="time-slot" class="form-control">
+                    <option value="Sáng">Buổi sáng (8h - 11h30)</option>
+                    <option value="Chiều">Buổi chiều (13h30 - 17h30)</option>
+                    <option value="Tối">Buổi tối (19h - 21h)</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">GỬI ĐĂNG KÝ TƯ VẤN</button>
+        
+        <div class="footer-note">
+            Chúng tôi cam kết bảo mật tuyệt đối mọi dữ liệu thông tin cá nhân và tình trạng sức khỏe của bạn.
+        </div>
+    </form>
+</div>
+
+</body>
+<script src="scripts/user-nav.js"></script>
+<footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-col brand-col">
+        <a class="logo footer-logo">
+          <img src="hinhanh/logo.png" alt="BMIgo Logo" class="logo-img" width="100px" height="100px">
+		 <p class="footer-about">BMIgo: hiểu rõ cơ thể mình, đơn giản hóa hành trình kiểm soát cân nặng, xây dựng lối sống lành mạnh!</p>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-heading">Danh mục</h4>
+        <ul>
+          <li><a href="BMI.html">Tính BMI</a></li>
+          <li><a href="thucdon.html">Thực đơn hàng tuần</a></li>
+          <li><a href="tapluyen.html">Các bài tập đơn giản</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hỗ trợ</h4>
+        <ul>
+          <li><a href="lienhe.html">Trung tâm hỗ trợ</a></li>
+          <li><a href="tuvan.html">Hướng dẫn tập luyện</a></li>
+          <li><a href="tuvan.html">Tư vấn món ăn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>©  2026 BMIgo. Tất cả các quyền được bảo lưu</p>
+      <p>Page được tạo nên với sức khỏe của người Việt là tiêu chí hàng đầu</p>
+	  <p>Lưu ý: Chỉ số BMI chỉ mang tính chất tham khảo và không thay thế cho các chẩn đoán y khoa chuyên sâu.</p>
+    </div>
+	<button class="scrollToTopBtn" id="scrollToTopBtn" title="Lên đầu trang">^</button>
+  </footer>
+</div>
+</body>
+<body>
+<div class="chat-badge" id="chatBadge" onclick="toggleChat()">💬</div>
+
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            <span>Trợ Lý Sức Khỏe & BMI 🌿</span>
+            <span class="close-btn" onclick="toggleChat()">×</span>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="msg bot">
+                Xin chào! Tôi có thể giúp gì cho hành trình kiểm soát cân nặng và sức khỏe của bạn hôm nay?
+                <div class="chat-options">
+                    <button class="opt-btn" onclick="selectOption('Tính chỉ số BMI')">📊 Tính BMI</button>
+					<button class="opt-btn" onclick="selectOption('Mẹo tập luyện')">🏋️ Mẹo tập luyện</button>
+                    <button class="opt-btn" onclick="selectOption('Mẹo kiểm soát cân nặng')">🥗 Mẹo kiểm soát cân nặng</button>
+                    <button class="opt-btn" onclick="selectOption('Tại sao áp dụng mẹo không hiệu quả?')">❓ Mẹo không hiệu quả?</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">➔</button>
+        </div>
+	</div>
+</body>
+<script>
+// Lấy thẻ button theo ID
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Lắng nghe sự kiện cuộn chuột của người dùng
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  // Nếu cuộn xuống hơn 20px từ đỉnh trang
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopBtn.style.display = "block"; // Hiện nút
+  } else {
+    scrollToTopBtn.style.display = "none";  // Ẩn nút
+  }
+}
+
+// Định nghĩa hành động khi bấm vào nút
+scrollToTopBtn.addEventListener("click", function() {
+  // Cuộn về vị trí x=0, y=0
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Đảm bảo hiệu ứng trượt mượt mà
+  });
+});	
+</script>
+</html>
+
